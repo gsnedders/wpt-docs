@@ -1,3 +1,6 @@
+---
+layout: page
+---
 This page describes the available test types and the requirements for
 authoring that apply to all test types. There is also a supplementary
 [guide to writing good testcases](test-style-guidelines.html).

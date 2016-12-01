@@ -1,3 +1,6 @@
+---
+layout: page
+---
 Web-platform-tests are designed to run in a self-contained environment
 on the local computer. All the required resources are packaged with
 the web-platform-tests repository.

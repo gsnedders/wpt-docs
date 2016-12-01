@@ -1,3 +1,6 @@
+---
+layout: page
+---
 Test submission is via the typical GitHub workflow.
 
 * Fork the [GitHub repository][repo] (and make sure you're still relatively in

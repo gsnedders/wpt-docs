@@ -1,3 +1,6 @@
+---
+layout: page
+---
 ## Test Review Policy
 
 In order to encourage a high level of quality in the W3C test

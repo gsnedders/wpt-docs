@@ -1,3 +1,6 @@
+---
+layout: page
+---
 ## Key Aspects of a Well Designed Test
 
 A badly written test can lead to false passes or false failures, as
