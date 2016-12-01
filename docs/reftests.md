@@ -1,3 +1,6 @@
+---
+layout: page
+---
 A reftest is a test that compares the visual output of one file (the
 test case) with the output of one or more other files (the
 references). The test and the reference must be carefully written so

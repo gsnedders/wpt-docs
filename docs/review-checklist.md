@@ -1,3 +1,6 @@
+---
+layout: page
+---
 When reviewing a test, make sure the test follows the
 [format][format] and [style][style] guidelines.
 

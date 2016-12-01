@@ -1,3 +1,6 @@
+---
+layout: page
+---
 CSS tests have some additional requirements for metadata.
 
 ### Specification Links
