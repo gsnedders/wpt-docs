@@ -248,25 +248,33 @@ information in one of two ways:
 In order for the latter to work, a file must either have a name of the
 form `{name}.sub.{ext}` e.g. `example-test.sub.html` or be referenced
 through a URL containing `pipe=sub` in the query string
-e.g. `example-test.html?pipe=sub`. The substitution syntax uses `{{ }}`
+e.g. `example-test.html?pipe=sub`. The substitution syntax uses `{% raw %}{{ }}{% endraw %}`
 to delimit items for substitution. For example to substitute in
 the host name on which the tests are running, one would write:
 
-    {{host}}
+```text
+{% raw %}{{host}}{% endraw %}
+```
 
 As well as the host, one can get full domains, including subdomains
 using the `domains` dictionary. For example:
 
-    {{domains[www]}}
+```text
+{% raw %}{{domains[www]}}{% endraw %}
+```
 
 would be replaced by the fully qualified domain name of the `www`
 subdomain. Ports are also available on a per-protocol basis e.g.
 
-    {{ports[ws][0]}}
+```text
+{% raw %}{{ports[ws][0]}}{% endraw %}
+```
 
 is replaced with the first (and only) websockets port, whilst
 
-    {{ports[http][1]}}
+```text
+{% raw %}{{ports[http][1]}}{% endraw %}
+```
 
 is replaced with the second HTTP port.
 
@@ -274,7 +282,9 @@ The request URL itself can be used as part of the substitution using
 the `location` dictionary, which has entries matching the
 `window.location` API. For example
 
-    {{location[host]}}
+```text
+{% raw %}{{location[host]}}{% endraw %}
+```
 
 is replaced by `hostname:port` for the current request.
 
