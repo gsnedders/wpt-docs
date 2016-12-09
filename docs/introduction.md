@@ -9,6 +9,11 @@ testsuite lives in [csswg-test][csswg-test]), ECMAScript (whose
 testsuite lives in [test262][test262]), and WebGL (whose testsuite
 lives in [WebGL][WebGL]).
 
+That said, csswg-test follows a superset of the policies of
+web-platform-tests, so the documentation provided here should
+similarly apply to it. Where extra policies apply, they are provided
+in separate documents and linked from the appropiate section.
+
 
 ## Testsuite Design
 
