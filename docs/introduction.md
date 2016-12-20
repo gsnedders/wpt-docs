@@ -47,30 +47,27 @@ specifications.
 
 ## Test Types
 
-Tests are generally written using the mechanism that is most easily
-reliably automatable. In general the following order of preference holds:
+The testsuite has a few types of tests, outlined below:
 
-* [testharness.js](testharness.html) tests — for any test that can be
-  written using script alone.
+* [testharness.js](testharness.html) tests, which are run through a JS
+  harness and report their result back with JS.
 
-* [Reftests][reftests] — for most tests of rendering.
+* [Reftests][reftests], which render two (or more) web pages and
+  combine them with equality assertions about their rendering (e.g.,
+  A.html and B.html must render identically).
 
-* WebDriver tests — for testing the WebDriver protocol itself.
+* [Manual tests][manual-tests], which rely on a human to run them and
+  determine their result.
 
-* [Manual tests][manual-tests] — as a last resort for anything that can't be tested
-  using one of the above techniques.
+* WebDriver tests, which are used for testing the WebDriver protocol
+  itself.
 
-Some scenarios demand certain test types. For example:
+In general, in order of preference:
 
-* Tests for layout will generally be reftests. In some cases it will
-  not be possible to construct a reference and a test that will always
-  render the same, in which case a manual test, accompanied by
-  testharness tests that inspect the layout via the DOM must be
-  written.
-
-* Features that require human interaction for security reasons
-  (e.g. to pick a file from the local filesystem) typically have to be
-  manual tests.
+ * tests for WebDriver should be WebDriver tests,
+ * tests for rendering should use reftests,
+ * tests that can be programmatically determined in JS should be testharness.js tests, and
+ * all other tests should be manual tests.
 
 
 [reftests]: ./reftests.html
