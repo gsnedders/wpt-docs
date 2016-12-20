@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Introduction
 ---
 
 web-platform-tests is a W3C-coordinated effort to build a
