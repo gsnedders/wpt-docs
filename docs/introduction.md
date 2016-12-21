@@ -64,6 +64,11 @@ The testsuite has a few types of tests, outlined below:
   itself.
 
 
+## Local Setup
+
+[XXX: include the "Running the Tests" section from README.]
+
+
 [reftests]: ./reftests.html
 [manual-tests]: ./manual-test.html
 [testharness-documentation]: ./testharness-documentation.html
