@@ -63,13 +63,6 @@ The testsuite has a few types of tests, outlined below:
 * WebDriver tests, which are used for testing the WebDriver protocol
   itself.
 
-In general, in order of preference:
-
- * tests for WebDriver should be WebDriver tests,
- * tests for rendering should use reftests,
- * tests that can be programmatically determined in JS should be testharness.js tests, and
- * all other tests should be manual tests.
-
 
 [reftests]: ./reftests.html
 [manual-tests]: ./manual-test.html
