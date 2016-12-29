@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Running Tests
 ---
 In simple cases individual tests can be run by simply loading the page
 in a browser window. For running larger groups of tests, or running

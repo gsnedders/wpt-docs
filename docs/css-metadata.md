@@ -1,5 +1,6 @@
 ---
 layout: page
+title: CSS Metadata
 ---
 CSS tests have some additional requirements for metadata.
 

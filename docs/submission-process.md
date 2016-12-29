@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Submitting Tests
 ---
 Test submission is via the typical GitHub workflow.
 

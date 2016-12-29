@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Test Templates
 ---
 This page contains templates for creating tests. The template syntax
 is compatible with several popular editors including TextMate, Sublime

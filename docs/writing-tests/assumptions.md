@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Test Assumptions
 ---
 
 The tests make a number of assumptions of the user agent, and new

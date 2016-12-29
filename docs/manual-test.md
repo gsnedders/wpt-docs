@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Manual Tests
 ---
 Some testing scenarios are intrinsically difficult to automate and
 require a human to run the test and check the pass condition.
