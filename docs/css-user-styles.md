@@ -1,5 +1,6 @@
 ---
 layout: page
+title: CSS User Stylesheets
 ---
 Some test may require special user style sheets to be applied in order
 for the case to be verified. In order for proper indications and

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Writing Tests
 ---
 
 If you haven't already, it's strongly recommended to read

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: CSS File Names
 ---
 CSS tests require a specific naming convention. This is also a good,
 but not mandatory, style to use for other tests.

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Server Features
 ---
 
 ## Advanced Testing Features
