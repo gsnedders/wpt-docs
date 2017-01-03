@@ -2,19 +2,19 @@
 layout: page
 title: Reftests
 ---
-A reftest is a test that compares the visual output of one file (the
-test case) with the output of one or more other files (the
-references). The test and the reference must be carefully written so
-that when the test passes they have identical rendering, but different
-rendering when the test fails.
+
+Reftests are one of the primary tools for testing things relating to
+rendering; they are made up of the test and one or more other pages
+("references") with assertions as to whether they render identically
+or not.
 
 ## How to Run Reftests
 
 Reftests can be run manually simply by opening the test and the
-reference file in multiple windows or tabs and either placing them
-side-by side or flipping between the two. In automation the comparison
-is done in an automated fashion, which can lead to differences too
-small for the human eye to notice causing tests to fail.
+reference file in multiple windows or tabs and flipping between the
+two. In automation the comparison is done in an automated fashion,
+which can lead to differences hard for the human eye to notice to
+cause the test to fail.
 
 ## Components of a Reftest
 
@@ -23,7 +23,7 @@ In the simplest case, a reftest consists of a pair of files called the
 
 The *test* file is the one that makes use of the technology being
 tested. It also contains a `link` element with `rel="match"` or
-`rel="mismatch"` and `href` attribute pointing to the *reference* file
+`rel="mismatch"` and `href` attribute pointing to the *reference* file,
 e.g. `<link rel=match href=references/green-box-ref.html>`.
 
 The *reference* file is typically written to be as simple as possible,
