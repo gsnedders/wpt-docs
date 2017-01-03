@@ -25,12 +25,6 @@ All new code submissions must use the GitHub pull request
 workflow. The GitHub UI for code review may be used, but other tools
 may also be used as long as the review is clearly linked.
 
-## Labels
-
-Pull requests get automatically labelled in the GitHub repository. Check
-out the [list of labels in Github][issues]
-to see the open pull requests for a given specification or a given Working Group.
-
 ## Status
 
 The
