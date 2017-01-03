@@ -10,31 +10,40 @@ various test types.
 There's also a load of [general requirements](general-requirements)
 that apply to all tests.
 
-## Choosing the Test Type
+## Test Type
 
-Tests are generally written using the mechanism that is most easily
-reliably automatable. In general the following order of preference holds:
+There are four main test types, listed in below in order of preference,
+starting with the highest preference:
+
+* [Reftests][reftests] should be used to test rendering and
+  layout. They consist of two or more pages with assertions as to
+  whether they render identically or not.
 
 * [testharness.js](testharness.html) tests should be used for testing
-  anything about parsing or scipt APIs.
+  everything else. They are built with the testharness.js unit testing
+  framework, and consist of assertions written in JavaScript.
 
-* [Reftests][reftests] should be used to test rendering.
-
-* WebDriver tests are used exclusively for testing the WebDriver
-  protocol itself.
+* [Visual tests](visual) should be used for checking rendering where
+  there is a large number of conforming renderings. They consist of a
+  page that renders to final state at which point a screenshot can be
+  taken and compared to an expected rendering for that user agent.
 
 * [Manual tests][manual-tests] are used as a last resort for anything
-  that can't be tested using any of the above.
+  that can't be tested using any of the above. They consist of a page
+  that needs manual interaction or verification of the final result.
 
-There are various reasons why one might end up writing a manual test:
+In general, there is a strong preference towards the first two test
+types (as they can be easily run without human interaction), so they
+should be used in preference to the others even if it results in a
+somewhat cumbersome test; there is a far weaker preference between the
+first two, and it is at times advisable to use testharness.js tests
+for things which would typically be tested using reftests but for
+which it would be cumbersome.
 
-* In some cases it will not be possible to construct a reference and a
-  test that will always render the same, leaving no choice but to
-  write a manual test.
-
-* Features that require human interaction for security reasons
-  (e.g. to pick a file from the local filesystem) have to be a manual
-  test.
+In addition to the four main test types, there are also WebDriver
+tests, which are used exclusively for testing the WebDriver protocol
+itself. There is currently no documentation about these tests,
+however.
 
 
 [lint-tool]: ./lint-tool.html
