@@ -64,6 +64,24 @@ The testsuite has a few types of tests, outlined below:
   itself.
 
 
+## GitHub
+
+GitHub is used both for issue tracking and test submissions; we
+provide a limited introduction to both git and GitHub in our appendix
+[XXX: add link].
+
+Pull Requests are automatically labelled based on the directory the
+files they change are in; there are also comments added automatically
+to notify a number of people similarly based on the directories: this
+list of people comes from the OWNERS files (note that these work
+recursively: `a/OWNERS` will get notified for `a/foo.html` and
+`a/b/bar.html`).
+
+If you want to be notified about changes to tests in a directory, feel
+free to add yourself to the OWNERS file: there's no requirement to own
+anything as a result!
+
+
 ## Local Setup
 
 [XXX: include the "Running the Tests" section from README.]
