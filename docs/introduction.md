@@ -50,14 +50,14 @@ specifications.
 
 The testsuite has a few types of tests, outlined below:
 
-* [testharness.js](testharness.html) tests, which are run through a JS
+* [testharness.js](writing-tests/testharness) tests, which are run through a JS
   harness and report their result back with JS.
 
-* [Reftests][reftests], which render two (or more) web pages and
+* [Reftests](writing-tests/reftests), which render two (or more) web pages and
   combine them with equality assertions about their rendering (e.g.,
   A.html and B.html must render identically).
 
-* [Manual tests][manual-tests], which rely on a human to run them and
+* [Manual tests](writing-tests/manual), which rely on a human to run them and
   determine their result.
 
 * WebDriver tests, which are used for testing the WebDriver protocol
@@ -87,9 +87,6 @@ anything as a result!
 [XXX: include the "Running the Tests" section from README.]
 
 
-[reftests]: ./reftests.html
-[manual-tests]: ./manual-test.html
-[testharness-documentation]: ./testharness-documentation.html
 [web-platform]: https://platform.html5.org
 [test262]: https://github.com/tc39/test262
 [csswg-test]: https://github.com/w3c/csswg-test

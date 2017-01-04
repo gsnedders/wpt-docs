@@ -39,7 +39,7 @@ have filenames of the form `name-manual.ext` i.e. a `-manual`
 suffix after the main filename but before the extension.
 
 Manual tests must be fully
-[self-describing](test-style-guielines.html#self-describing-tests). It
+[self-describing](general-guidelines#be-self-describing). It
 is particularly important for these tests that it is easy to determine
 the result from the information presented to the tester, because a
 tester may have hundreds of tests to get through, and little

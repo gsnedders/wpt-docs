@@ -3,7 +3,7 @@ layout: page
 title: Review Checklist
 ---
 When reviewing a test, make sure the test follows the
-[format][format] and [style][style] guidelines.
+[general guidelines](../writing-tests/general-guidelines).
 
 In addition, the test should be checked for the following:
 
@@ -34,7 +34,7 @@ The test does not use proprietary features (vendor-prefixed or otherwise).
 
 ## Reftests Only
 <input type="checkbox">
-The test has a [self-describing][selftest] statement
+The test has a self-describing statement
 
 <input type="checkbox">
 The self-describing statement is accurate, precise, simple, and
@@ -125,8 +125,5 @@ If the test needs code running on the server side, the server code must
 be written in python, and the python code must be reviewed carefully to
 ensure it isn't doing anything dangerous.
 
-[format]: ./test-format-guidelines.html
-[style]: ./test-style-guidelines.html
-[reftest]: ./reftests.html
-[scripttest]: ./testharness-documentation.html
-[selftest]: ./test-style-guidelines.html#self-describing
+[reftest]: ../writing-tests/reftests
+[scripttest]: ../writing-tests/testharness.html
