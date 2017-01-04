@@ -37,10 +37,9 @@ on, e.g. `git checkout -b topic-name`
 For detailed guidelines on setup and each of these steps, please refer to the
 [Github Test Submission][github101] documentation.
 
-Hop on to [irc or the mailing list][discuss] if you have an
-issue. There is no need to announce your review request, as soon as
-you make a Pull Request GitHub will inform interested parties.
+Hop on to IRC or the mailing list if you have an issue. There is no
+need to announce your review request, as soon as you make a Pull
+Request GitHub will inform interested parties.
 
 [repo]: https://github.com/w3c/web-platform-tests/
-[github101]: ./github-101.html
-[discuss]: /discuss.html
+[github101]: ../appendix/github-101.html

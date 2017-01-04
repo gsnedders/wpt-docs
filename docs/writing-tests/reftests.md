@@ -36,10 +36,10 @@ only passes if the *test* and *reference* have pixel-perfect identical
 rendering. `rel="mismatch"` inverts this so the test only passes when
 the renderings differ.
 
-In general the files used in a reftest should follow the
-[format][format] and [style][style] guidelines. The *test* should also
-be [self-describing][selfdesc], to allow a human to determine whether
-the the rendering is as expected.
+In general the files used in a reftest should follow
+the [general guidelines](general-guidelines). The *test* should also
+be self-describing, to allow a human to determine whether the the
+rendering is as expected.
 
 Note that references can be shared between tests; this is strongly
 encouraged since it permits optimizations when running tests.
@@ -97,9 +97,9 @@ a block element, by constructing a reference using underlines on a
 
 ## Example Reftests
 
-These examples are all [self-describing][selfdesc] tests as they
-each have a simple statement on the page describing how it should
-render to pass the tests.
+These examples are all self-describing tests as they each have a
+simple statement on the page describing how it should render to pass
+the tests.
 
 ### HTML example
 
@@ -107,8 +107,6 @@ render to pass the tests.
 
 This test verifies that a right-to-left rendering of **SAW** within a
 ```<bdo>``` element displays as **WAS**.
-
-([view page rendering][html-reftest-example])
 
 ```html
 <!DOCTYPE html>
@@ -132,8 +130,6 @@ except that the code behind it is different.
   different: here, the same effect is created with
   very mundane, dependable technology.
 
-([view page rendering][html-reffile-example])
-
 ```html
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -141,16 +137,3 @@ except that the code behind it is different.
 <p>Pass if you see WAS displayed below.</p>
 <p>WAS</p>
 ```
-
-[testharness]: ./testharness-documentation.html
-[format]: ./test-format-guidelines.html
-[style]: ./test-style-guidelines.html
-[selfdesc]: ./test-style-guidelines.html#self-describing-tests
-[reference-links]: ./test-templates.html#reference-links
-[html-reftest-example]: ./html-reftest-example.html
-[html-reffile-example]: ./html-reffile-example.html
-[css-reftest-example]: http://test.csswg.org/source/css21/borders/border-bottom-applies-to-009.xht
-[css-reffile-example]: http://test.csswg.org/source/css21/borders/border-bottom-applies-to-001-ref.xht
-[svg-reftest-example]: http://test.csswg.org/source/css-transforms-1/translate/svg-translate-001.html
-[svg-reffile-example]: http://test.csswg.org/source/css-transforms-1/translate/reference/svg-translate-ref.html
-[indicating-failure]: ./test-style-guidelines.html#failure
