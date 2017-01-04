@@ -7,7 +7,7 @@ If you haven't already, it's strongly recommended to read
 the [introduction](../introduction) first, as it introduces the
 various test types.
 
-There's also a load of [general requirements](general-requirements)
+There's also a load of [general guidelines](general-guidelines)
 that apply to all tests.
 
 ## Test Type
@@ -15,7 +15,7 @@ that apply to all tests.
 There are four main test types, listed in below in order of preference,
 starting with the highest preference:
 
-* [Reftests][reftests] should be used to test rendering and
+* [Reftests](reftests) should be used to test rendering and
   layout. They consist of two or more pages with assertions as to
   whether they render identically or not.
 
@@ -28,7 +28,7 @@ starting with the highest preference:
   page that renders to final state at which point a screenshot can be
   taken and compared to an expected rendering for that user agent.
 
-* [Manual tests][manual-tests] are used as a last resort for anything
+* [Manual tests](manual) are used as a last resort for anything
   that can't be tested using any of the above. They consist of a page
   that needs manual interaction or verification of the final result.
 
@@ -44,12 +44,3 @@ In addition to the four main test types, there are also WebDriver
 tests, which are used exclusively for testing the WebDriver protocol
 itself. There is currently no documentation about these tests,
 however.
-
-
-[lint-tool]: ./lint-tool.html
-[reftests]: ./reftests.html
-[manual-tests]: ./manual-test.html
-[test-templates]: ./test-templates.html
-[requirement-flags]: ./test-templates.html#requirement-flags
-[testharness-documentation]: ./testharness-documentation.html
-[validator]: http://validator.w3.org
