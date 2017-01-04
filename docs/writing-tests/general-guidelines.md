@@ -1,6 +1,6 @@
 ---
 layout: page
-title: General Test Requirements
+title: General Test Guidelines
 ---
 
 ### File Paths and Names
