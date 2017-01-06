@@ -144,13 +144,13 @@ your local web-platform-tests working directory like this:
 The lint tool is also run automatically for every submitted pull request,
 and reviewers will not merge branches with tests that have lint errors, so
 you must fix any errors the lint tool reports. For details on doing that,
-see the [lint-tool documentation][lint-tool].
+see the [lint-tool documentation](lint-tool).
 
 But in the unusual case of error reports for things essential to a certain
 test or that for other exceptional reasons shouldn't prevent a merge of a
 test, update and commit the `lint.whitelist` file in the web-platform-tests
 root directory to suppress the error reports. For details on doing that,
-see the [lint-tool documentation][lint-tool].
+see the [lint-tool documentation](lint-tool).
 
 
 ## CSS-Specific Requirements
