@@ -78,6 +78,14 @@ UTF-8. In file formats where UTF-8 is not the default encoding, they
 must contain metadata to mark them as such (e.g., `<meta
 charset=utf-8>` in HTML files) or be pure ASCII.
 
+### Server Side Support
+
+The custom web server
+supports [a variety of features](server-features) useful for testing
+browsers, including (but not limited to!) support for writing out
+appropriate domains and custom (per-file and per-directory) HTTP
+headers.
+
 ### Be Short
 
 Tests should be as short as possible. For reftests in particular
