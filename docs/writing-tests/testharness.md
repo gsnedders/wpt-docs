@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Writing Javascript Tests
+title: testharness.js Tests
 ---
 
 Javascript tests are the correct test type to write in any situation
@@ -12,10 +12,10 @@ documentation are avaliable:
 <!--  * [Tutorial](testharness-tutorial.html) - An introduction to
      `testharness.js` for new users -->
 
-  * [Library Documentation]() - A full
+  * [Library Documentation](testharness-api) - A full
      discussion of the library and detailed API reference.
 
-  * [idlharness.js Documentation]() - A library for
+  * [idlharness.js Documentation](idlharness) - A library for
      testing IDL interfaces using `testharness.js`
 
   * [wptserve Documentation](http://wptserve.readthedocs.org) - A reference to
