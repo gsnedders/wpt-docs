@@ -25,8 +25,6 @@ follows is normally just increased incrementally, and padded to three
 digits. (If you'd end up with more than 999 tests, your `test-topic`
 is probably too broad!)
 
-csswg-test requires a [naming scheme](css-naming) that inspired this.
-
 #### Support Files
 
 Various support files are available in in the `/common/` and `/media/`
@@ -163,9 +161,9 @@ see the [lint-tool documentation](lint-tool).
 
 ## CSS-Specific Requirements
 
-Tests for csswg-test have some additional requirements that have to be
-met in order to be included in an official specification testsuite:
+In order to be included in an official specification testsuite, tests
+for csswg-test have some additional requirements for:
 
-* [User style sheets](css-user-styles.html)
-
-* [Metadata](css-metadata.html)
+* [File naming](css-naming),
+* [Metadata](css-metadata), and
+* [User style sheets](css-user-styles).
