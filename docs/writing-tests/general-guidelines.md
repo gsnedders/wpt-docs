@@ -112,6 +112,9 @@ assumptions that can be relied on are documented [here](assumptions).
 Tests that rely on anything else should be manual tests that document
 their assumptions.
 
+When it comes to fonts, tests should either not rely on fonts having
+specific metrics, or make use of the [Ahem font](ahem).
+
 ### Be Self-Contained
 
 Tests must not depend on external network resources, including
