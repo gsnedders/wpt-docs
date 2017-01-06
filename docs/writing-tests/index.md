@@ -44,3 +44,9 @@ In addition to the four main test types, there are also WebDriver
 tests, which are used exclusively for testing the WebDriver protocol
 itself. There is currently no documentation about these tests,
 however.
+
+## Submitting Tests
+
+Once you're written tests, please submit them using
+the [typical GitHub Pull Request workflow](submission-process); please
+make sure you run the `lint` script before opening a pull request!
