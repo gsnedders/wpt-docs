@@ -202,7 +202,8 @@ The assertion should not be:
 * A line or reference from the CSS specification unless that line is
   a complete assertion when taken out of context.
 
-The test assertion is **optional**. It helps the reviewer understand
+The test assertion is **optional**, but is is highly recommended to include one.
+It helps the reviewer understand
 the goal of the test so that he or she can make sure it is being
 tested correctly. Also, in case a problem is found with the test
 later, the testing method (e.g. using `color` to determine pass/fail)
