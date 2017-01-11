@@ -33,32 +33,37 @@ single specification. For W3C specs, these directories are typically
 named after the shortname of the spec (i.e. the name used for snapshot
 publications under `/TR/`); for WHATWG specs, they are typically named
 after the subdomain of the spec (i.e. trimming `.spec.whatwg.org` from
-the URL); for other specs, something deemed sensible is used. In all
-cases, there are occasional exceptions for historic reasons.
+the URL); for other specs, something deemed sensible is used. In any
+case, there are occasional exceptions for historic reasons.
 
 Within the specification-specific directory there are two common ways
-of laying out tests. The first is a flat structure which is sometimes
-adopted for very short specifications. The alternative is a nested
+of laying out tests: the first is a flat structure which is sometimes
+adopted for very short specifications; the alternative is a nested
 structure with each subdirectory corresponding to the id of a heading
-in the specification. This layout provides some implicit metadata
-about the part of a specification being tested according to its
-location in the filesystem, and is preferred for larger
-specifications.
+in the specification. The latter provides some implicit metadata about
+the part of a specification being tested according to its location in
+the filesystem, and is preferred for larger specifications.
 
 
 ## Test Types
 
 The testsuite has a few types of tests, outlined below:
 
-* [testharness.js](writing-tests/testharness) tests, which are run through a JS
-  harness and report their result back with JS.
+* [testharness.js](writing-tests/testharness) tests, which are run
+  through a JS harness and report their result back with JS.
 
-* [Reftests](writing-tests/reftests), which render two (or more) web pages and
-  combine them with equality assertions about their rendering (e.g.,
-  A.html and B.html must render identically).
+* [Reftests](writing-tests/reftests), which render two (or more) web
+  pages and combine them with equality assertions about their
+  rendering (e.g., A.html and B.html must render identically), run
+  either by the user switching between tabs/windows and trying to
+  observe differences or through automated scripts.
 
-* [Manual tests](writing-tests/manual), which rely on a human to run them and
-  determine their result.
+* [Visual tests](writing-tests/visual) which display a page where the
+  result is determined either by a human looking at it or by comparing
+  it with a saved screenshot for that user agent on that platform.
+
+* [Manual tests](writing-tests/manual), which rely on a human to run
+  them and determine their result.
 
 * WebDriver tests, which are used for testing the WebDriver protocol
   itself.
@@ -67,13 +72,13 @@ The testsuite has a few types of tests, outlined below:
 ## GitHub
 
 GitHub is used both for issue tracking and test submissions; we
-provide a limited introduction to both git and GitHub in our appendix
-[XXX: add link].
+provide [a limited introduction](appendix/github-101) to both git and
+GitHub.
 
 Pull Requests are automatically labelled based on the directory the
 files they change are in; there are also comments added automatically
-to notify a number of people similarly based on the directories: this
-list of people comes from the OWNERS files (note that these work
+to notify a number of people: this list of people comes from OWNERS
+files in those same directories and their parents (i.e., they work
 recursively: `a/OWNERS` will get notified for `a/foo.html` and
 `a/b/bar.html`).
 
