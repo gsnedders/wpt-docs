@@ -5,9 +5,9 @@ title: General Test Guidelines
 
 ### File Paths and Names
 
-When chosing where in the directory structure to put the tests, try to
-follow the structure of existing tests for that specification; if
-there are no existing tests, it is generally recommended to create
+When choosing where in the directory structure to put any new tests,
+try to follow the structure of existing tests for that specification;
+if there are no existing tests, it is generally recommended to create
 subdirectories for each section.
 
 Due to path length limitations on Windows, test paths must be less
@@ -19,11 +19,11 @@ File names should generally be somewhat descriptive of what is being
 tested; very generic names like `001.html` are discouraged. A common
 format is `test-topic-001.html`, where `test-topic` is a short
 identifier that describes the test. It should avoid conjunctions,
-articles, and prepositions as it is a file name, not an English
-phrase, hence it should be as concise as possible. The integer that
-follows is normally just increased incrementally, and padded to three
-digits. (If you'd end up with more than 999 tests, your `test-topic`
-is probably too broad!)
+articles, and prepositions as it should be as concise as possible. The
+integer that follows is normally just increased incrementally, and
+padded to three digits. (If you'd end up with more than 999 tests,
+your `test-topic` is probably too broad!)
+
 
 #### Support Files
 
@@ -38,36 +38,22 @@ testsuites.
 
 Sometimes you may want to add a script to the repository that's meant
 to be used from the command line, not from a browser (e.g., a script
-for generating test files). If you want to ensure (e.g., or security
-reasons) that such scripts won't be handled by the HTTP server, but
-will instead only be usable from the command line, then place them
-in a `tools` subdirectory at the appropriate level.
-
-Any files in those `tools` directories won't be handled by the HTTP
-server; instead the server will return a 404 if a user navigates to
-the URL for a file within them.
+for generating test files). If you want to ensure (e.g., for security
+reasons) that such scripts will only be usable from the command line
+but won't be handled by the HTTP server then place them in a `tools`
+subdirectory at the appropriate level—the server will then return a
+404 if they are requested.
 
 For example, if you wanted to add a script for use with tests in the
-`notifications` directory, create the `notifications/tools` subdir
-and put your script there.
+`notifications` directory, create the `notifications/tools`
+subdirectory and put your script there.
 
 
 ### File Formats
 
-Tests must be HTML or XML (inc. XHTML and SVG) files. Some
-testharness.js tests are auto-generated from JS files. [XXX: LINKME]
+Tests must be HTML or XML (inc. XHTML and SVG) files; some
+testharness.js tests are [auto-generated from JS files](server-features).
 
-*Note: For CSS tests, the test source will be parsed and
-re-serialized. This re-serialization will cause minor changes to the
-test file, notably: attribute values will always be quoted, whitespace
-between attributes will be collapsed to a single space, duplicate
-attributes will be removed, optional closing tags will be inserted,
-and invalid markup will be normalized.  If these changes should make
-the test inoperable, for example if the test is testing markup error
-recovery, add the [flag][requirement-flags] `asis` to prevent
-re-serialization. This flag will also prevent format conversions so it
-may be necessary to provide alternate versions of the test in other
-formats (XHTML, HTML, etc.)*
 
 ### Character Encoding
 
@@ -76,6 +62,7 @@ UTF-8. In file formats where UTF-8 is not the default encoding, they
 must contain metadata to mark them as such (e.g., `<meta
 charset=utf-8>` in HTML files) or be pure ASCII.
 
+
 ### Server Side Support
 
 The custom web server
@@ -83,6 +70,7 @@ supports [a variety of features](server-features) useful for testing
 browsers, including (but not limited to!) support for writing out
 appropriate domains and custom (per-file and per-directory) HTTP
 headers.
+
 
 ### Be Short
 
@@ -93,27 +81,32 @@ elements on the page should be avoided so it is clear what is part of
 the test (for a typical testharness test, the only content on the page
 will be rendered by the harness itself).
 
+
 ### Be Minimal
 
 Tests should generally avoid depending on edge case behaviour of
-features that they don't explicitly intend to test. For example,
-except where testing parsing, tests should contain no
-[parse errors][validator].
+features that they don't explicitly intend on testing. For example,
+except where testing parsing, tests should contain
+no [parse errors](https://validator.nu).
 
-This said, tests which intentionally address the interactions between
-multiple platform features are not only acceptable but encouraged.
+This is not, however, to discourage testing of edge cases or
+interactions between multiple features; such tests are an essential
+part of ensuring interoperability of the web platform.
+
 
 ### Be Cross-Platform
 
 Tests should be as cross-platform as reasonably possible, working
 across different devices, screen resolutions, paper sizes, etc. The
-assumptions that can be relied on are documented [here](assumptions).
-
-Tests that rely on anything else should be manual tests that document
+assumptions that can be relied on are documented [here](assumptions);
+tests that rely on anything else should be manual tests that document
 their assumptions.
 
-When it comes to fonts, tests should either not rely on fonts having
-specific metrics, or make use of the [Ahem font](ahem).
+Aside from the [Ahem font](ahem), fonts cannot be relied on to be
+either installed or to have specific metrics. As such, in most cases
+when a known font is needed Ahem should be used. In other cases,
+`@font-face` should be used.
+
 
 ### Be Self-Contained
 
@@ -122,13 +115,16 @@ w3c-test.org. When these tests are run on CI systems they are
 typically configured with access to external resources disabled, so
 tests that try to access them will fail. Where tests want to use
 multiple hosts this is possible through a known set of subdomains and
-[features of wptserve](server-features).
+the
+[text substitution features of wptserve](server-features#tests-involving-multiple-origins).
+
 
 ### Be Self-Describing
 
 Tests should make it obvious when they pass and when they fail. It
 shouldn't be necessary to consult the specification to figure out
 whether a test has passed of failed.
+
 
 ### Style Rules
 
