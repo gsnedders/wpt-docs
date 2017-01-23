@@ -440,11 +440,7 @@ If, instead of modifying the existing PR, you wish to make a new one based on it
 3. Push your changes to **your** repo: `git push origin <your-new-branch>`
 4. Go to the Github Web UI to [submit a new Pull Request](#submit).
 
-   _Note: You can close the original pull request
-   if you want to reduce clutter in the list of open PRs,
-   but you do not have to:
-   as your PR is based on it, the original pull request will automatically be closed
-   when yours gets merged._
+   _Note: You should also close the original pull request._
 
 When you're done reviewing or making changes,
 you can delete the branch: `git branch -d <name-of-the-PR-branch>`
